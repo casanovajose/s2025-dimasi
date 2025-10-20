@@ -1,0 +1,104 @@
+:root {
+
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: notor-sans, sans-serif;
+}
+
+.container {
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+header h1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.50rem; 
+    margin-bottom: 6.75rem; 
+}
+
+header p {
+    font-size: 1 rem; 
+    font-weight: italic;
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 15rem; 
+}
+
+nav ul { 
+    display: flex;
+    justify-content: center;
+    gap: 3.5625rem;
+    margin: 50px 0;
+    padding: 15px;
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mifoto {
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sobre-mi {
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+    margin-bottom: 8rem;
+    margin-top: 5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.sobre-mi p {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card {
+    max-width:300px; 
+    position: relative;
+    overflow: clip;
+}
+
+.card__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.card__content {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    top: 0;
+    bottom: 0;
+    padding: 1rem;
+
+    color: #fff;
+
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card:hover .card__content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card:hover .card__image {
+    transform: scale(1.25);
+}
