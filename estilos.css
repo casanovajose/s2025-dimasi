@@ -12,7 +12,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: white;
     overflow-x: hidden;
-    background: black;
+    background: rgb(0, 0, 0);
 }
 
 header {
@@ -30,8 +30,8 @@ header {
 }
 
 header h1 {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 nav a {
@@ -42,7 +42,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff69b4;
+    color: #c30463;
 }
 
 section {
@@ -61,9 +61,9 @@ section {
 #inicio h2 {
     position: relative;
     z-index: 5;
-    font-size: 2.5rem;
+    font-size: 4rem;
     text-align: center;
-    line-height: 1.3;
+    line-height: 3rem;
 }
 
 #inicio canvas {
@@ -75,26 +75,65 @@ section {
     z-index: 0;
 }
 
+/* ===== SECCIÓN SOBRE MÍ ===== */
 #sobre-mi {
-    background-color: #0e0e15;
     padding: 3rem;
     text-align: center;
 }
 
+.sobre-mi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 10%;     
+    background-color: #000000;
+}
+
+.sobre-mi img {
+    width: 300px;          
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 1;
+}
+
+.sobre-mi .bio {
+    max-width: 500px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.sobre-mi h2 {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.sobre-mi p {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    justify-content: center;
+}
+
 /* ===== SECCIÓN PROYECTOS ===== */
 .trabajos {
-    height: 100vh;               /* Ocupa toda la pantalla */
-    display: flex;               /* Flex para centrar el contenedor interno */
-    justify-content: center;     /* Centra horizontalmente */
-    align-items: center;         /* Centra verticalmente */
-    position: relative;          /* Para posicionar elementos absolutos si los necesitás */
+    height: 100vh;               
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    position: relative;
     padding: 40px;
+    background-color: #12071f;
 }
 
 /* Contenedor interno para manejar el grid */
 .trabajos .contenedor-tarjetas {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* Tres tarjetas lado a lado */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     width: 100%;
     max-width: 1200px;
@@ -104,20 +143,19 @@ section {
 .tarjeta {
     display: flex;
     flex-direction: column;
-    background-color: #f8f8f8;
+    background-color: #000000;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-/* Imagen: 1/4 del ancho */
 .tarjeta img {
-    width: 100%;             /* Ocupa todo el ancho */
-    height: 150px;           /* Podés cambiarlo */
+    width: 100%;             
+    height: 150px;           
     object-fit: cover;
 }
 
-/* Contenido: 3/4 del ancho */
+
 .contenido {
     padding: 60px;
     display: flex;
@@ -141,54 +179,47 @@ section {
     margin-top: 10px;
     font-weight: bold;
     text-decoration: none;
+    color: #094914;
 }
 
 .link-registro:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* ===== SECCIÓN CONTACTO ===== */
 .contacto {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 60px 10%;
-    gap: 50px;
+    gap: 40px;
 }
 
-/* ==== Cajita del formulario ==== */
+/* ===== FORMULARIO ESTILIZADO ===== */
 .contacto-form {
     flex: 1;
-    background-color: #f7f7f7;   /* Fondo */
+    background-color: #600635;
     padding: 30px;
-    border-radius: 12px;         /* Bordes redondeados */
-    border: 1px solid #dcdcdc;   /* Borde */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(8px);
 }
 
-.contacto-form h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
+/* Formulario interno */
 .contacto-form form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.contacto-form label {
-    font-size: 1rem;
-}
-
 .contacto-form input,
 .contacto-form textarea {
-    width: 100%;
+    display: flex;
     padding: 12px;
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     font-size: 1rem;
-    font-family: inherit;
+    justify-content: right;
 }
 
 .contacto-form textarea {
@@ -199,33 +230,27 @@ section {
 .contacto-form button {
     padding: 12px;
     background-color: black;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
     transition: 0.3s;
 }
 
 .contacto-form button:hover {
-    background-color: #333;
+    background-color: #094914;
 }
 
-/* ==== Redes a la derecha ==== */
+/* ===== REDES A LA DERECHA ===== */
 .contacto-redes {
-    flex: 0.7;
+    flex: 0.8;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 25px;
 }
 
-.contacto-redes h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* Iconos en fila */
 .redes-icons {
     display: flex;
     gap: 20px;
@@ -243,75 +268,107 @@ section {
     transform: scale(1.1);
 }
 
+/* ===== FOOTER ===== */
+
+footer {
+    width: auto;                 
+    padding: 3px;
+    background-color: #094914;       
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1); 
+    text-align: center;              
+    font-size: 1rem;
+    color: #767575;
+}
+
+/* ===== RESPONSIVE: SEGUIR EN 2 COLUMNAS ===== */
+@media (max-width: 900px) {
+
+    .contacto {
+        padding: 40px 5%;
+        gap: 20px;
+    }
+
+    .contacto-form {
+        padding: 20px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+        font-size: 0.95rem;
+    }
+
+    .contacto-redes {
+        gap: 15px;
+    }
+
+    .redes-icons img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ===== PARA CELULARES PEQUEÑOS (SIGUE SIENDO 2 COLUMNAS) ===== */
+@media (max-width: 600px) {
+
+    .contacto {
+        gap: 15px;
+    }
+
+    /* El formulario se achica */
+    .contacto-form {
+        padding: 15px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+        font-size: 0.9rem;
+    }
+
+    /* Las redes también se achican */
+    .redes-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 /* ===== SECCIÓN SOBRE MÍ ===== */
-.sobre-mi {
-    display: flex;
-    align-items: center;          /* Centra verticalmente */
-    justify-content: center;      /* Centra horizontalmente */
-    gap: 50px;
-    padding: 60px 10%;
-}
 
-/* Imagen */
-.sobre-mi img {
-    width: 300px; 
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-/* Texto biográfico */
-.sobre-mi .bio {
-    max-width: 500px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Título opcional dentro de la sección */
-.sobre-mi h2 {
-    margin-bottom: 15px;
-    font-size: 2rem;
-}
-
-/* ===== Responsive para celular ===== */
+/* ===== RESPONSIVE SIN CAMBIAR A COLUMNA ===== */
 @media (max-width: 768px) {
+
     .sobre-mi {
-        flex-direction: column;      /* Imagen arriba, texto abajo */
-        text-align: center;
+        padding: 70px 5%;
+        gap: 20px;
     }
 
     .sobre-mi img {
-        width: 80%;
-        max-width: 300px;
+        width: 45%;              /* la imagen se achica bastante */
+        max-width: 200px;        /* límite para que no ocupe mucho */
     }
 
     .sobre-mi .bio {
-        max-width: 90%;
+        font-size: 1.05rem;      /* el texto se achica un poco, no demasiado */
+        max-width: 55%;          /* ocupa más lugar que la imagen */
     }
 }
 
-footer {
-    width: 100%;                     /* Ocupa todo el ancho */
-    padding: 20px 0;
+@media (max-width: 500px) {
 
-    background-color: #f5f5f5;       /* Fondo suave */
-    border-top: 1px solid #dcdcdc;   /* Borde arriba */
-    
-    text-align: center;              /* Centrar texto */
-    font-size: 1rem;
-    color: #333;
+    .sobre-mi {
+        gap: 15px;
+    }
+
+    .sobre-mi img {
+        width: 40%;              /* aún más chica en pantallas muy pequeñas */
+        max-width: 150px;
+    }
+
+    .sobre-mi .bio {
+        max-width: 60%;          /* texto más dominante */
+        font-size: 1rem;
+    }
 }
 
-/* Para asegurarnos de que el footer quede abajo incluso si hay poco contenido */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1; /* El contenido empuja al footer hacia abajo */
-}
 
 /* Responsive */
 @media (max-width: 768px) {
